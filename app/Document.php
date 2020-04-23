@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class Document extends Model
 {
-    protected $guarded = []; // YOLO
+    protected $guarded = [];
 
     protected static function boot()
     {

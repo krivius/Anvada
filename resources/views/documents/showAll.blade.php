@@ -2,6 +2,10 @@
 
 @section('content')
 
+    <div class="paginator">
+        {{$documents->render()}}
+    </div>
+
     @foreach($documents as $document)
 
 
@@ -25,11 +29,7 @@
 
 
     @endforeach
-
-@endsection
-
-@section('title')
-    <div id="logo" class="container">
-        <h1><a href="/" class="icon icon-tasks"><span>Anvada test task</span></a></h1>
+    <div class="paginator">
+        {{$documents->render()}}
     </div>
 @endsection

@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+Route::get('/', 'DocumentController@index');
+
+Route::get('/new/', 'DocumentController@create'); //создаем новый черновик
+
+Route::post('/api/v1/document', 'DocumentController@store'); //сохраняем новый черновик
+
+Route::get('/document/{id}/edit', 'DocumentController@edit');
+Route::get('/document/{id}/publish', 'DocumentController@publish');
+
+Route::get('/index', 'DocumentController@index');
+
+Route::patch('/api/v1/document/{id}', 'DocumentController@update');
+
+Route::get('/all', 'DocumentController@all');
